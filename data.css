@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Container Styles */
+.container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+table.dataTable {
+    width: 100% !important;
+    border-collapse: collapse;
+}
+
+table.dataTable thead {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+table.dataTable thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+table.dataTable tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table.dataTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.dataTable tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+table.dataTable tbody td {
+    padding: 8px;
+}
+
+/* Search Row Styles */
+.search-row input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* Checkbox Group Styles */
+.checkbox-group-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.checkbox-group div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.styled-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+/* Tabs Styles */
+.nav-tabs {
+    margin-bottom: 20px;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+}
+
+.nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #007bff;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: #ddd #ddd #f8f9fa;
+}
+
+/* Button Styles */
+.btn-danger {
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table.dataTable thead {
+        display: none;
+    }
+
+    table.dataTable tbody td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table.dataTable tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
